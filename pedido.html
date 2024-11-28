@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedidos</title>
+    <link rel="stylesheet" href="cssUsuario/pedidos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <!-- Icono de volver -->
+        <button id="btnVolver" class="btn-volver">
+            <i class="fa-solid fa-arrow-left"></i>
+        </button>
+        <h1>Mis Pedidos</h1>
+    </header>
+
+    <main>
+        <div id="pedidos-container"></div>
+    </main>
+
+    <script>
+        // Función para regresar a la página anterior
+        document.getElementById("btnVolver").addEventListener("click", () => {
+            window.history.back(); // Navega a la página anterior
+        });
+    </script>
+     <script type="module" src="scripts/pedidos-script.js"></script>
+</body>
+</html>

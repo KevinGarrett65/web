@@ -1,0 +1,163 @@
+/**********************/
+/*     CARRITO        */
+/**********************/ 
+#btnCerrarSesion:hover {
+    background-color: #d32f2f; /* Un tono más oscuro del rojo */
+}
+
+/* Contenedor para organizar los botones en una línea */
+.botones-carrito {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px; /* Espacio entre los botones */
+    margin-top: 20px;
+}
+
+/* Estilo del botón de vaciar carrito */
+#btnVaciarCarrito {
+    background-color: #ff5722; /* Color anaranjado */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    flex: 1; /* Permite que el botón ocupe espacio disponible */
+}
+
+#btnVaciarCarrito:hover {
+    background-color: #e64a19; /* Un tono más oscuro del anaranjado */
+}
+
+/* Estilo del botón de compra */
+#btnComprarCarrito {
+    background-color: #28a745; /* Verde para el botón de compra */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    flex: 1; /* Permite que el botón ocupe espacio disponible */
+}
+
+#btnComprarCarrito:hover {
+    background-color: #218838; /* Un tono más oscuro de verde */
+}
+
+/* Opcional: ajustar el estilo del modal */
+.modal {
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro transparente */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-contenido {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-contenido h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.cerrar {
+    color: #aaa;
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.cerrar:hover {
+    color: #000;
+}
+
+
+.container-user {
+	display: flex;
+	gap: 1rem;
+	cursor: pointer;
+}
+
+.container-user .fa-user {
+	font-size: 3rem;
+	color: var(--primary-color);
+	padding-right: 2.5rem;
+	border-right: 1px solid #e2e2e2;
+}
+
+.container-user .fa-basket-shopping {
+	font-size: 3rem;
+	color: var(--primary-color);
+	padding-left: 1rem;
+}
+
+.content-shopping-cart {
+	display: flex;
+	flex-direction: column;
+}
+
+/* ********************************** */
+/*          Modal del carrito         */
+/* ********************************** */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-contenido {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.cerrar {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.cerrar:hover,
+.cerrar:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#listaProductosCarrito {
+    list-style: none;
+    padding: 0;
+}
+
+#listaProductosCarrito li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+    font-size: 1.4rem;
+}

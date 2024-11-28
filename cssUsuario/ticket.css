@@ -1,0 +1,187 @@
+/* Contenedor principal del ticket */
+#HTMLtoPDF {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #fff;
+    margin: 0 auto;
+    padding: 20px;
+    width: 600px; /* Ancho fijo para mantener consistencia en el PDF */
+    box-shadow: none; /* Sin sombras en el PDF */
+    border: 1px solid #ddd; /* Borde para darle apariencia de ticket */
+    border-radius: 8px;
+}
+
+/* Encabezado principal */
+#HTMLtoPDF h1 {
+    font-size: 24px;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Títulos */
+#HTMLtoPDF h2 {
+    font-size: 18px;
+    color: #1c8443;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+/* Lista de productos en el carrito */
+#ticket-lista-carrito {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#ticket-lista-carrito li {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    padding: 5px 0;
+    border-bottom: 1px dotted #999;
+}
+
+#ticket-lista-carrito li:last-child {
+    border-bottom: none;
+}
+
+/* Total del carrito */
+#ticket-total {
+    font-weight: bold;
+    font-size: 16px;
+    text-align: right;
+    margin-top: 10px;
+    color: #000;
+}
+
+/* Detalles del cliente */
+#detalles-cliente p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+/* Método de pago */
+#metodo-pago p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+/* Sección de resumen */
+section {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Botonera */
+.botonera {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 20px;
+}
+
+/* Botones */
+button, a[onclick="HTMLtoPDF()"] {
+    background-color: #1c8443;
+    color: white;
+    padding: 10px 20px;
+    font-size: 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+button:hover, a[onclick="HTMLtoPDF()"]:hover {
+    background-color: #145a32;
+}
+
+/* Encabezado para el PDF */
+header {
+    background-color: #1c8443; /* Fondo verde oscuro */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+}
+
+/* Ajustes de fuentes */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+
+/* Ajustes de tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    font-size: 14px;
+}
+
+table th {
+    background-color: #1c8443;
+    color: white;
+    font-weight: bold;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+
+@media print {
+    #HTMLtoPDF {
+        width: 100%;
+        max-width: 800px; /* Tamaño máximo para adaptarse a la página */
+        font-family: Arial, sans-serif;
+        line-height: 1.5;
+        color: #000;
+        margin: 0 auto;
+        padding: 20px;
+        background: #fff;
+    }
+
+    #HTMLtoPDF h2 {
+        color: #1c8443;
+        text-align: center;
+    }
+
+    #HTMLtoPDF ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    #HTMLtoPDF ul li {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px dotted #ddd;
+        padding: 5px 0;
+    }
+
+    #HTMLtoPDF ul li:last-child {
+        border-bottom: none;
+    }
+
+    #HTMLtoPDF .total {
+        font-weight: bold;
+        text-align: right;
+        margin-top: 10px;
+    }
+}

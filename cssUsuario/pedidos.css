@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #1c8443;
+    color: white;
+    padding: 2%;
+    text-align: center;
+    display: flex;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+#contenedor-pedidos {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.pedido {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.pedido h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.pedido p {
+    margin: 5px 0;
+}
+
+
+.pedido h2 {
+    margin: 0;
+    color: #333;
+}
+
+.pedido ul {
+    list-style: none;
+    padding: 0;
+}
+
+.pedido ul li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.pedido select {
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    margin-top: 1rem;
+}
+
+.btn-volver {
+    background: none;
+    border: none;
+    color: #333;
+    font-size: 24px; /* Tamaño del ícono */
+    cursor: pointer;
+}
+
+.btn-volver:hover {
+    color: #007bff; /* Color al pasar el mouse */
+}

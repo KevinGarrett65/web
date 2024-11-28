@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Cafetería UJAT</title>
+    <link rel="stylesheet" href="cssUsuario/login-styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap">
+</head>
+<body>
+
+<main>
+    <!-- Inicializar Firebase y Firestore -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+        import { getFirestore, doc, setDoc } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+
+        // Configuración de Firebase
+        const firebaseConfig = {
+          apiKey: "AIzaSyAIutw__qzk2i31w6eo4mSL6xQl3fg6avU",
+          authDomain: "cafeteria-ujat-eb2b0.firebaseapp.com",
+          projectId: "cafeteria-ujat-eb2b0",
+          storageBucket: "cafeteria-ujat-eb2b0.firebasestorage.app",
+          messagingSenderId: "269489762867",
+          appId: "1:269489762867:web:4f228461f6c4a122afa946",
+          measurementId: "G-S6L7HNSX72"
+        };
+
+        // Inicializar Firebase y Firestore
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+        
+        // Exportar la base de datos Firestore para usarla en el script de login
+        export { db };
+    </script>
+
+    <div class="login-container">
+        <h2>Iniciar Sesión</h2>
+        <form id="formLogin">
+            <div class="input-group">
+                <label for="username">Usuario</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Contraseña</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" class="btn">Entrar</button>
+        </form>
+        <p class="register-link">¿No tienes una cuenta? <a href="#" id="abrirModalRegistro">Regístrate aquí</a></p>
+    </div>
+
+    <!-- Modal de Registro -->
+    <div id="modalRegistro" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar">&times;</span>
+            <h2>Registro de Usuario</h2>
+            <form id="formRegistro">
+                <!-- Campos de registro -->
+                <div class="input-group">
+                    <label for="matricula">Matrícula</label>
+                    <input type="text" id="matricula" name="matricula" required>
+                </div>
+                <div class="input-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="input-group">
+                    <label for="apellidoPaterno">Apellido Paterno</label>
+                    <input type="text" id="apellidoPaterno" name="apellidoPaterno" required>
+                </div>
+                <div class="input-group">
+                    <label for="apellidoMaterno">Apellido Materno</label>
+                    <input type="text" id="apellidoMaterno" name="apellidoMaterno" required>
+                </div>
+                <div class="input-group">
+                    <label for="correo">Correo Electrónico</label>
+                    <input type="email" id="correo" name="correo" required>
+                </div>
+                <div class="input-group">
+                    <label for="tipoUsuario">Tipo de Usuario</label>
+                    <select id="tipoUsuario" name="tipoUsuario" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="alumno">Alumno</option>
+                        <option value="profesor">Profesor</option>
+                        <option value="empleado">Empleado</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="nuevo-password">Contraseña</label>
+                    <input type="password" id="nuevo-password" name="nuevo-password" required>
+                </div>
+                <button type="submit" class="btn">Registrarse</button>
+            </form>
+        </div>
+    </div>
+</main>
+
+<script type="module" src="scripts/login-script.js"></script>
+
+</body>
+</html>
+
+

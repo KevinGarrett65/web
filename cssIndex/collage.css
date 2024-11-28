@@ -1,0 +1,78 @@
+.collage-promociones {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+    background-color: var(--background-color);
+}
+
+.slider {
+    position: relative;
+    width: 90%;
+    max-width: 900px;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.slide.active {
+    opacity: 1; /* Para que la imagen actual sea visible */
+}
+
+.comprar-ahora {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-comprar {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%); 
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 1.5rem 4rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    opacity: 0;
+    z-index: 2; 
+
+   /* background-color: var(--primary-color);
+    color: #fff;
+    padding: 1.5rem 4rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;*/
+}
+
+/* Mostrar el botón al pasar el cursor sobre .slide */
+.slide:hover .btn-comprar {
+    opacity: 1; /* Muestra el botón al hacer hover */
+}
+
+.btn-comprar:hover {
+    background-color: #16602e;
+}

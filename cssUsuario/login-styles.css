@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import '../cssIndex/reset.css';
+@import '../cssIndex/variables.css';
+@import '../cssIndex/utilities.css';
+
+/* ********************************** */
+/*               LOGIN                */
+/* ********************************** */
+.login-container {
+    width: 400px;
+    margin: 100px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1.4rem;
+    color: var(--dark-color);
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.4rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #16602e;
+}
+
+.register-link {
+    margin-top: 15px;
+    font-size: 1.4rem;
+}
+
+.register-link a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+/* ********************************** */
+/*             REGISTRO               */
+/* ********************************** */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed; /* Mantener en su lugar */
+    z-index: 1000; /* Por encima de otros elementos */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Alto completo */
+    overflow: auto; /* Habilitar scroll si es necesario */
+    background-color: rgba(0,0,0,0.5); /* Fondo semitransparente */
+}
+
+.modal-contenido {
+    background-color: #fefefe;
+    margin: 10% auto; /* 10% desde arriba y centrado */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Ancho del modal */
+    max-width: 500px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.cerrar {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.cerrar:hover,
+.cerrar:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-contenido h2 {
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.modal-contenido .input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.modal-contenido .input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1.4rem;
+    color: var(--dark-color);
+}
+
+.modal-contenido .input-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.4rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Estilo para el campo de selección de Tipo de Usuario */
+.input-group select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.4rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: var(--dark-color);
+    font-family: inherit;
+    cursor: pointer;
+    appearance: none; /* Remueve el estilo por defecto en algunos navegadores */
+    background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="%23333" d="M7 10l5 5 5-5H7z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 1.2rem;
+}
+
+.input-group select:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+@media (max-width: 500px) {
+    .login-container, .modal-contenido {
+        width: 90%;
+    }
+}
+

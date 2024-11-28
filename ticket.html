@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cssUsuario/ticket.css">
+    <title>Confirmación de Compra</title>
+</head>
+<body>
+    <!-- Contenido del PDF -->
+    <div id="HTMLtoPDF">
+        <header>
+            <h1>Confirmación de Compra</h1>
+        </header>
+        <main>
+            <section id="resumen-carrito">
+                <h2>Resumen del Carrito</h2>
+                <ul id="ticket-lista-carrito">
+                    <!-- Los productos del carrito se insertarán aquí dinámicamente -->
+                </ul>
+                <p><strong>Total:</strong> <span id="ticket-total">$0.00</span></p>
+            </section>
+            <section id="detalles-cliente">
+                <h2>Detalles del Cliente</h2>
+                <p><strong>Nombre:</strong> <span id="ticket-nombre"></span></p>
+                <p><strong>Matrícula:</strong> <span id="ticket-matricula"></span></p>
+                <p><strong>Correo Electrónico:</strong> <span id="ticket-email"></span></p>
+                <p><strong>Teléfono:</strong> <span id="ticket-telefono"></span></p>
+            </section>
+            <section id="metodo-pago">
+                <h2>Método de Pago</h2>
+                <p><strong>Método Seleccionado:</strong> <span id="ticket-metodo-pago"></span></p>
+            </section>
+        </main>
+    </div>
+
+    <div class="botonera">
+        <!-- Botón para terminar el proceso de compra -->
+        <button id="btn-finalizar">Finalizar Comprar</button> 
+        <!-- Botón para generar el PDF -->
+        <a href="#" onclick="HTMLtoPDF()">Descargar</a>
+    </div>
+
+
+    <!-- Enlaces a los scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    
+    <script src="js/jquery-2.1.3.js"></script>
+    <script src="js/jspdf.js"></script>
+    <script src="js/pdfFromHTML.js"></script>
+    <script type="module" src="scripts/ticket.js"></script>
+</body>
+</html>
+

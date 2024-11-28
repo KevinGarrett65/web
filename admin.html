@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Cafetería</title>
+    <link rel="stylesheet" href="cssIndex/admin-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="container-navbar">
+            <nav class="navbar container">
+                <i class="fa-solid fa-bars"></i>
+                <ul class="menu">
+                    <li><a href="#productos">Gestión de Productos</a></li>
+                    <li><a href="#inventario">Inventario</a></li>
+                    <li><a href="#reporteVentas">Reporte de Ventas</a></li>
+                </ul>
+                <div class="user-menu">
+                    <i class="fa-solid fa-user" id="userIcon"></i>
+                    <div class="dropdown" id="userDropdown" style="display: none;">
+                        <button id="btnCerrarSesion">Cerrar sesión</button>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <section id="productos">
+            <h2>Gestión de Productos</h2>
+            
+            <form id="formProducto">
+                <input type="text" id="nombreProducto" placeholder="Nombre del Producto" required>
+                <textarea id="descripcionProducto" placeholder="Descripción del Producto" required></textarea>
+                <select id="categoriaProducto" required>
+                    <option value="" disabled selected>Selecciona una categoría</option>
+                    <option value="A01">Alimento</option>
+                    <option value="B02">Bebida</option>
+                    <option value="C03">Combos</option>
+                </select>
+                <input type="number" id="precioProducto" placeholder="Precio" required>
+                <button type="submit">Añadir Producto</button>
+            </form>            
+            <ul id="listaProductos"></ul>
+        </section>
+
+        <section id="inventario">
+            <h2>Inventario</h2>
+            <table id="tablaInventario">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Nombre del Producto</th>
+                        <th>Cantidad</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Filas del inventario generadas dinámicamente -->
+                </tbody>
+            </table>
+            <h3>Productos sin stock</h3>
+            <ul id="productosSinStock"></ul>
+        </section>
+        
+
+        <section id="reporteVentas">
+            <h2>Reporte de Ventas</h2>
+            <ul id="listaReportes"></ul>
+        </section>
+    </main>
+
+    <script type="module" src="scripts/admin-script.js"></script>
+</body>
+
+</html>

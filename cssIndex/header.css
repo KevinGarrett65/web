@@ -1,0 +1,82 @@
+/* ********************************** */
+/*               HEADER               */
+/* ********************************** */
+.container-hero {
+	background-color: var(--background-color);
+	max-width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hero {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 2rem 0;
+}
+
+.customer-support {
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+}
+
+.customer-support i {
+	font-size: 3.3rem;
+}
+
+.content-customer-support {
+	display: flex;
+	flex-direction: column;
+}
+
+.container-logo {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.container-logo i {
+	font-size: 3rem;
+}
+
+.container-logo h1 a {
+	text-decoration: none;
+	color: #000;
+	font-size: 3rem;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+}
+
+/*************************************/
+/*       Mensaje de bienvenida       */
+/*************************************/
+
+#mensajeBienvenida {
+    font-size: 2rem; /* Tamaño de la fuente más grande */
+    font-weight: 700; /* Texto en negrita */
+    color: #4CAF50; /* Color verde a juego con el esquema */
+    margin-top: 5px; /* Separación opcional para mayor claridad */
+}
+
+/* Estilo del nombre de usuario */
+#nombreUsuario {
+    font-size: 1.6rem;
+    color: #4CAF50;  /* Color del texto */
+    margin-left: 10px;
+}
+
+.pedido-icono {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    color: #333;
+    text-decoration: none;
+    margin-left: 15px;
+    transition: color 0.3s;
+}
+
+.pedido-icono:hover {
+    color: #4CAF50;
+}

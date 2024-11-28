@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import '../cssIndex/reset.css';
+
+html {
+    font-size: 62.5%;
+    font-family: 'Poppins', sans-serif;
+}
+
+.contenido {
+    max-width: 1200px;
+    width: 100%;
+    margin: 40px auto;
+    display: flex;
+}
+
+.mostrador {
+    width: 100%;
+    transition: .5s ease;
+}
+
+.mostrador .fila {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.mostrador .fila .item {
+    max-width: 210px;
+    padding: 30px;
+    height: 250px;
+    text-align: center;
+    margin: 0 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: .3s;
+}
+
+.mostrador .fila .item:hover {
+    background-color: #e6e6e6;
+}
+
+.mostrador .fila .item .contenedor-foto {
+    width: 100%;
+    height: 150px; /* Tamaño uniforme */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.mostrador .fila .item .contenedor-foto img {
+    width: auto;
+    height: 100%;
+    object-fit: contain; /* Ajustar sin distorsión */
+    display: block;
+}
+
+.mostrador .fila .item .descripcion {
+    color: #707070;
+    font-weight: bold;
+}
+
+.mostrador .fila .item .precio {
+    color: #f85151;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.seleccion {
+    transition: .5s ease;
+    opacity: 0;
+    width: 0%;
+    border: 1px solid #ccc;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.cerrar {
+    position: absolute;
+    right: 0;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.info {
+    padding: 20px;
+}
+
+.info img {
+    display: block;
+    margin: 30px auto;
+    width: 80%;
+}
+
+.info h2 {
+    color: #707070;
+    margin-bottom: 10px;
+}
+
+.info p {
+    font-size: 14px;
+    color: #707070;
+    margin-bottom: 10px;
+}
+
+.info .precio {
+    font-size: 30px;
+    font-weight: bold;
+    color: #f85151;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.info .fila {
+    display: flex;
+    align-items: flex-end;
+}
+
+.info .fila label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.info .fila button {
+    height: 40px;
+    border: none;
+    padding: 0 10px;
+    color: #fff;
+    background-color: #f85151;
+}
+
+.quantity-selector {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+}
+
+.quantity-selector button {
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #f85151;
+    color: #fff;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.quantity-selector button:hover {
+    background-color: #e84141;
+}
+
+.quantity-selector input[type="number"] {
+    width: 50px;
+    text-align: center;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    margin: 0 5px;
+    border-radius: 3px;
+}
+
+.category-dropdown {
+    margin-left: 10px; /* Separación del search-form */
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+    height: 40px; /* Alinearlo con el input del search-form */
+    vertical-align: middle;
+}
+
+.search-and-filter {
+    display: flex;
+    justify-content: flex-end; /* Alinea todo a la derecha */
+    align-items: center;
+    gap: 10px; /* Espacio entre el formulario y el menú desplegable */
+}
+
+.search-form {
+    margin-left: auto; /* Empuja el formulario hacia la derecha */
+}
+
+.category-dropdown {
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+    height: 40px; /* Alinearlo con el input del search-form */
+    vertical-align: middle;
+}
+

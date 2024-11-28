@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Cafeteria UJAT</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+	<link rel="stylesheet" href="styles.css" />
+	
+</head>
+
+<body>
+	<header>
+		<div class="container-hero" id="inicio">
+			<div class="container hero">
+				<div class="customer-support">
+					<i class="fa-solid fa-headset"></i>
+					<div class="content-customer-support">
+						<span class="text">Atención a Estudiantes</span>
+						<span class="number">914-456-7890</span>
+					</div>
+				</div>
+
+				<div class="container-logo">
+					<i class="fa-solid fa-mug-hot"></i>
+					<h1 class="logo"><a href="/">Cafeteria UJAT</a></h1>
+				</div>
+
+				<div class="container-user">
+					<button id="btnIniciarSesion">Iniciar sesión</button>
+					<div class="user-menu">
+						<i class="fa fa-user user-icon"></i>
+						<div class="dropdown-menu" id="userDropdown" style="display: none;">
+						<a href="perfil.html">Ver Perfil</a>
+						<a href="pedido.html">Detalle de Pedido</a>
+            			<button id="btnCerrarSesionDropdown">Cerrar Sesión</button>
+						</div>
+					</div>
+
+					<div id="mensajeBienvenida" style="display: none; font-weight: bold; color: #4CAF50;"></div>
+					<!-- Ícono de carrito  -->
+					<i class="fa-solid fa-basket-shopping"></i>
+					<div class="content-shopping-cart">
+						<span class="text">Pedidos</span>
+						<span class="number">(0)</span>
+					</div>
+				</div>	
+					<div id="containerCerrarSesion" style="display: none;">
+						<button id="btnCerrarSesion">Cerrar sesión</button>
+					</div>
+
+
+			</div>
+		</div>
+
+		<!-- Carrito -->
+		<div id="modalCarrito" class="modal">
+			<div class="modal-contenido">
+				<span class="cerrar">&times;</span>
+				<h2>Carrito de Compras</h2>
+				<ul id="listaProductosCarrito"></ul>
+				<div class="botones-carrito">
+					<button id="btnVaciarCarrito">Vaciar Carrito</button>
+					<button id="btnComprarCarrito">Comprar</button>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="container-navbar" >
+			<nav class="navbar container">
+				<i class="fa-solid fa-bars"></i>
+				<ul class="menu">
+					<li><a href="#inicio">Inicio</a></li>
+					<li><a href="#categoria">Categorias</a></li>
+					<li><a href="#productos">Productos</a></li>
+					<li><a href="menu.html">Menu</a></li>
+					<li><a href="#resenas">Reseñas</a></li>
+				</ul>
+
+				<form class="search-form">
+					<input type="search" placeholder="Buscar..." />
+					<button class="btn-search">
+						<i class="fa-solid fa-magnifying-glass"></i>
+					</button>
+				</form>
+			</nav>
+		</div>
+	</header>
+
+	<!-- Tarjeta del producto 1 
+	<section class="banner">
+		<div class="content-banner">
+			<p>Especial del día</p>
+			<h2>Aprovecha las Promociones <br />UJAT</h2>
+			<a href="menu.html">Comprar ahora</a>
+		</div>
+	</section>-->
+
+	<section class="collage-promociones">
+		<div class="slider">
+			<div class="slide">
+				<img src="img/promocion1.jpg" alt="Promoción 1">
+				<a href="menu.html" class="btn-comprar">Comprar ahora</a>
+			</div>
+			<div class="slide">
+				<img src="img/promocion2.jpg" alt="Promoción 2">
+				<a href="menu.html" class="btn-comprar">Comprar ahora</a>
+			</div>
+			<div class="slide">
+				<img src="img/promocion3.jpg" alt="Promoción 3">
+				<a href="menu.html" class="btn-comprar">Comprar ahora</a>
+			</div>
+			<div class="slide">
+				<img src="img/promocion4.jpg" alt="Promoción 4">
+				<a href="menu.html" class="btn-comprar">Comprar ahora</a>
+			</div>
+		</div>
+	</section>
+	
+	
+	<main class="main-content">
+		<section class="container container-features">
+			<div class="card-feature">
+				<i class="fa-solid fa-plane-up"></i>
+				<div class="feature-content">
+					<span>Envío gratuito a las aulas</span>
+					<p>En pedido superior a $150</p>
+				</div>
+			</div>
+			<div class="card-feature">
+				<i class="fa-solid fa-wallet"></i>
+				<div class="feature-content">
+					<span>Rembolsos</span>
+					<p>100% garantía de devolución de dinero</p>
+				</div>
+			</div>
+			<div class="card-feature">
+				<i class="fa-solid fa-gift"></i>
+				<div class="feature-content">
+					<span>Tarjeta regalo especial</span>
+					<p>Ofrece bonos especiales con regalo navideño</p>
+				</div>
+			</div>
+			<div class="card-feature">
+				<i class="fa-solid fa-headset"></i>
+				<div class="feature-content">
+					<span>Servicio al cliente </span>
+					<p>LLámenos 914-456-7890</p>
+				</div>
+			</div>
+		</section>
+
+		<section id="categoria" class="container top-categories">
+			<h1 class="heading-1">Mejores Categorías</h1>
+			<div class="container-categories">
+				<div class="card-category category-antojitos">
+					<p>Alimentos</p>
+					<span>Ver más</span>
+				</div>
+				<div class="card-category category-taco">
+					<p>Bebidas</p>
+					<span>Ver más</span>
+				</div>
+				<div class="card-category category-promo">
+					<p>Combos</p>
+					<span>Ver más</span>
+				</div>
+			</div>
+		</section>
+
+		<section id="productos" class="container top-products">
+			<h1 class="heading-1">Mejores Productos</h1>
+
+			<div class="container-options">
+				<span class="active">Destacados</span>
+				<span>Más recientes</span>
+			</div>
+
+			<div class="container-products">
+				<!-- Tarjeta del producto 1 -->
+				<div class="card-product" data-id="1" data-name="Café Capuchino" data-price="40">
+					<img src="img/Coca cola.png" alt="Producto 1" class="product-img">
+					<h2 class="product-name">Coca Cola</h2>
+					<p class="product-description">Coca cola 600ml</p>
+					<p class="product-price">$20.00</p> 
+					<button class="btn-add">Añadir al carrito</button>
+				</div>
+
+				<!-- Tarjeta del producto 2 -->
+
+				<div class="card-product" data-id="2" data-name="Café Americano" data-price="30">
+					<img src="img/Banderilla.jpeg" alt="Producto 2" class="product-img">
+					<h2 class="product-name">Banderilla</h2>
+					<p class="product-description">Banderilla 1pz</p>
+					<p class="product-price">$15.00</p> 
+					<button class="btn-add">Añadir al carrito</button>
+				</div>
+
+				<!-- Tarjeta del producto 3 -->
+				<div class="card-product" data-id="3" data-name="Tarta de Chocolate" data-price="50">
+					<img src="img/Agua de jamaica.png" alt="Producto 3" class="product-img">
+					<h2 class="product-name">Agua de jamaica</h2>
+					<p class="product-description">Agua de jamaica 500ml</p>
+					<p class="product-price">$15.00</p> 
+					<button class="btn-add">Añadir al carrito</button>
+				</div>
+			</div>
+			<section id="resenas" class="container blogs">
+				<h1 class="heading-1">Últimas reseñas</h1>
+
+				<div class="container-blogs">
+					<div class="card-blog">
+						<div class="container-img">
+							<img src="img/blog-1.jpg" alt="Imagen Blog 1" />
+							<div class="button-group-blog">
+								<span>
+									<i class="fa-solid fa-magnifying-glass"></i>
+								</span>
+								<span>
+									<i class="fa-solid fa-link"></i>
+								</span>
+							</div>
+						</div>
+						<div class="content-blog">
+							<h3>Convivencias en la Cafeteria</h3>
+							<span>2 Noviembre 2023</span>
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing
+								elit. Iste, molestiae! Ratione et, dolore ipsum
+								quaerat iure illum reprehenderit non maxime amet dolor
+								voluptas facilis corporis, consequatur eius est sunt
+								suscipit?
+							</p>
+							<div class="btn-read-more">Leer más</div>
+						</div>
+					</div>
+					<div class="card-blog">
+						<div class="container-img">
+							<img src="img/blog-2.jpg" alt="Imagen Blog 2" />
+							<div class="button-group-blog">
+								<span>
+									<i class="fa-solid fa-magnifying-glass"></i>
+								</span>
+								<span>
+									<i class="fa-solid fa-link"></i>
+								</span>
+							</div>
+						</div>
+						<div class="content-blog">
+							<h3>Nuevo Proyectos Instalación de Nuevos Equipos</h3>
+							<span>3 Diciembre 2023</span>
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing
+								elit. Iste, molestiae! Ratione et, dolore ipsum
+								quaerat iure illum reprehenderit non maxime amet dolor
+								voluptas facilis corporis, consequatur eius est sunt
+								suscipit?
+							</p>
+							<div class="btn-read-more">Leer más</div>
+						</div>
+					</div>
+					<div class="card-blog">
+						<div class="container-img">
+							<img src="img/blog-3.jpg" alt="Imagen Blog 3" />
+							<div class="button-group-blog">
+								<span>
+									<i class="fa-solid fa-magnifying-glass"></i>
+								</span>
+								<span>
+									<i class="fa-solid fa-link"></i>
+								</span>
+							</div>
+						</div>
+						<div class="content-blog">
+							<h3> Ventajas de tomar Café</h3>
+							<span>29 Noviembre 2023</span>
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing
+								elit. Iste, molestiae! Ratione et, dolore ipsum
+								quaerat iure illum reprehenderit non maxime amet dolor
+								voluptas facilis corporis, consequatur eius est sunt
+								suscipit?
+							</p>
+							<div class="btn-read-more">Leer más</div>
+						</div>
+					</div>
+				</div>
+			</section>
+	</main>
+
+	<footer class="footer">
+		<div class="container container-footer">
+			<div class="menu-footer">
+				<div class="contact-info">
+					<p class="title-footer">Información de Contacto</p>
+					<ul>
+						<li>
+							Campus Chontalpa Cunduacan,TAB
+						</li>
+						<li>Teléfono: 914-456-7890</li>
+						<li>Fax: 55555300</li>
+						<li>EmaiL: Ujat.com.mx</li>
+					</ul>
+					<div class="social-icons">
+						<span class="facebook">
+							<i class="fa-brands fa-facebook-f"></i>
+						</span>
+						<span class="twitter">
+							<i class="fa-brands fa-twitter"></i>
+						</span>
+						<span class="youtube">
+							<i class="fa-brands fa-youtube"></i>
+						</span>
+						<span class="pinterest">
+							<i class="fa-brands fa-pinterest-p"></i>
+						</span>
+						<span class="instagram">
+							<i class="fa-brands fa-instagram"></i>
+						</span>
+					</div>
+				</div>
+
+				<div class="information">
+					<p class="title-footer">Información</p>
+					<ul>
+						<li><a href="#">Acerca de Nosotros</a></li>
+						<li><a href="#">Información Delivery</a></li>
+						<li><a href="#">Politicas de Privacidad</a></li>
+						<li><a href="#">Términos y condiciones</a></li>
+						<li><a href="#">Contactános</a></li>
+					</ul>
+				</div>
+
+				<div class="my-account">
+					<p class="title-footer">Mi cuenta</p>
+
+					<ul>
+						<li><a href="perfil.html">Mi cuenta</a></li> 
+						<li><a href="#">Historial de ordenes</a></li>
+						<li><a href="#">Lista de deseos</a></li>
+						<li><a href="#">Boletín</a></li>
+						<li><a href="#">Reembolsos</a></li>
+					</ul>
+				</div>
+
+				<div class="newsletter">
+					<p class="title-footer">Boletín informativo</p>
+
+					<div class="content">
+						<p>
+							Suscríbete a nuestros boletines ahora y mantente al
+							día con nuevas colecciones y ofertas exclusivas.
+						</p>
+						<input type="email" placeholder="Ingresa el correo aquí...">
+						<button onclick="window.location.href='menu.html';">Ordena YA!!!</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="copyright">
+				<p>
+					Desarrollado por Equipo de Desarrolladores de la UJAT
+				</p>
+
+				<img src="img/payment.png" alt="Pagos">
+			</div>
+		</div>
+	</footer>
+
+	<script src="https://kit.fontawesome.com/81581fb069.js" crossorigin="anonymous"></script>
+	<script src="scripts/index.js"></script>
+</body>
+
+</html>

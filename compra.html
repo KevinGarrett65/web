@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compra</title>
+    <link rel="stylesheet" href="cssUsuario/compra.css">
+</head>
+
+<body>
+    <header>
+         <button id="btnVolver" class="btn-volver">
+            <i class="fa-solid fa-arrow-left"></i>Volver al menú
+        </button>       
+        <h1>Confirmación de Compra</h1>
+    </header>
+    <main>
+        <section id="carrito">
+            <h2>Resumen del Carrito</h2>
+            <ul id="lista-carrito"></ul>
+            <p><strong>Total:</strong> $<span id="total-carrito">0.00</span></p>
+        </section>
+
+        <section id="datos-cliente">
+            <h2>Detalles del Cliente</h2>
+            <div>
+                <p><strong>Nombre:</strong> <span id="nombre">Cargando...</span></p>
+                <p><strong>Matrícula:</strong> <span id="matricula">Cargando...</span></p>
+                <p><strong>Correo Electrónico:</strong> <span id="email">Cargando...</span></p>
+                <label for="telefono">Teléfono:</label>
+                <input type="text" id="telefono" name="telefono" placeholder="Ingresa tu teléfono" required>
+            </div>
+        </section>
+        
+
+        <section id="metodo-pago">
+            <h2>Método de Pago</h2>
+            <label>
+                <input type="radio" name="pago" value="efectivo" checked> Efectivo
+            </label>
+            <label>
+                <input type="radio" name="pago" value="cupon"> Cupón de Beca
+            </label>
+        </section>
+
+        <button id="btn-comprar-ahora">Comprar Ahora</button> 
+    </main>
+    <script>
+        // Función para regresar a la página anterior
+        document.getElementById("btnVolver").addEventListener("click", () => {
+            window.history.back(); // Navega a la página anterior
+        });
+    </script>
+    <script type="module" src="scripts/compra-script.js"></script>
+</body>
+</html>

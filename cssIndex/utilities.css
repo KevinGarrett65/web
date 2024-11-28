@@ -1,0 +1,21 @@
+/* utilities.css */
+
+/* Configuración de la fuente base */
+html {
+    font-size: 62.5%;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Utilidad de contenedor centrado */
+.container {
+    max-width: 120rem;
+    margin: 0 auto;
+
+}
+
+/* Encabezado general */
+.heading-1 {
+    text-align: center;
+    font-weight: 500;
+    font-size: 3rem;
+}
